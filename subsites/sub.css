@@ -1,0 +1,22 @@
+body  {
+    background-color: #545f96;
+}
+img {
+    border: 8px solid #c0939a;
+    background-color: #8998e7;
+    border-radius: 25px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #8998e7;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+h1{
+    font-size: 60px;
+    color: #c0939a;
+}
+p {
+    font-size: 40px;
+    font-weight: 900;
+}

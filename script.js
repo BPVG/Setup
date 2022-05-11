@@ -1,3 +1,5 @@
-function onw() {
-    window.open("mic.html");
+function onw(page) {
+    var file = page.concat(".html")
+    console.log(file)
+    window.open(file);
 }

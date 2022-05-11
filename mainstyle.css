@@ -1,10 +1,15 @@
+body  {
+    background-image: url("images/setbg.png");
+    background-color: #cccccc;
+}
 img {
     width: 1300px;
     height: 940px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+    border: 8px solid #eebbc3;
+}
 
 .btn {
     position: absolute;
@@ -12,17 +17,13 @@ img {
     border: none;
     padding: 15px;
     border-radius: 45%;
-}
-body  {
-    background-image: url("setbg.png");
-    background-color: #cccccc;
-}
-img {
-    border: 8px solid #eebbc3;
+    transition: 0.3s;
 }
 .btn:hover {
     background-color: #ee8f9d;
+    border-radius: 35%;
 }
+
 .btn1 {
     top: 25%;
     left: 41%;
