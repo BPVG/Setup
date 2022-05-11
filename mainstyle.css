@@ -13,6 +13,13 @@ img {
     padding: 15px;
     border-radius: 45%;
 }
+body  {
+    background-image: url("setbg.png");
+    background-color: #cccccc;
+}
+img {
+    border: 8px solid #eebbc3;
+}
 .btn:hover {
     background-color: #ee8f9d;
 }

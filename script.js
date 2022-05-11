@@ -1,3 +1,3 @@
-function sex() {
-    alert("sex")
+function onw() {
+    window.open("mic.html");
 }
