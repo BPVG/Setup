@@ -1,0 +1,58 @@
+img {
+    width: 1300px;
+    height: 940px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.btn {
+    position: absolute;
+    background-color: #eebbc3;
+    border: none;
+    padding: 15px;
+    border-radius: 45%;
+}
+.btn:hover {
+    background-color: #ee8f9d;
+}
+.btn1 {
+    top: 25%;
+    left: 41%;
+}
+.btn2 {
+    top: 80%;
+    left: 25%;
+}
+.btn3 {
+    top: 76%;
+    left: 42%;
+}
+.btn4 {
+    top: 60%;
+    left: 47%;
+}
+.btn5 {
+    top: 58%;
+    left: 64%;
+}
+.btn6 {
+    top: 50%;
+    left: 55%;
+}
+.btn7 {
+    top: 20%;
+    left: 55%;
+}
+.btn8 {
+    top: 35%;
+    left: 75%;
+}
+.btn9 {
+    top: 42%;
+    left: 45%;
+}
+.btn10 {
+    top: 5%;
+    left: 57%;
+}
