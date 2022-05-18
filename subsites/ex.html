@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microphone</title>
+</head>
+<body class = "content">
+
+<form>
+    <label>Pirma punkta x koordinate:</label>
+    <input type="number" id="x_start">
+    <label>Pirma punkta y koordinate:</label>
+    <input type="number" id="y_start"><br>
+    <label>Otra punkta x koordinate:</label>
+    <input type="number" id="x1_start">
+    <label>Otra punkta y koordinate:</label>
+    <input type="number" id="y1_start"><br>
+    <label>Tresa punkta x koordinate:</label>
+    <input type="number" id="x2_start">
+    <label>Tresa punkta y koordinate:</label>
+    <input type="number" id="y2_start"><br>
+    <label for="l_color">Linijas krasa:</label><br>
+    <input type="color" id="lcol" value="#ff0000"><br>
+    <label for="b_color">Fona krasa:</label><br>
+    <input type="color" id="bgcol" value="#ff0000"><br>
+    <label for="r">3 punkti uz dulo</label><br>
+    <input type="checkbox" id="r" name="r"><br>
+    <button onclick="checkData()">Zimet</button>
+</form>
+<canvas id="myCanvas" width="200" height="200" style="border:3px solid #000000;"></canvas>
+
+<table>
+<tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+</tr>
+<tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+</tr>
+<tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+</tr>
+</table>
+
+<script src="cringe.js"></script>
+</html>
