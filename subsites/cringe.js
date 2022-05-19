@@ -2,6 +2,20 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var w = h = 200
 
+function rand(){
+    ctx.fillStyle = document.getElementById("bgcol").value;
+    ctx.fillRect(0, 0, w, h);
+    for(i = 0; i < 3; i++){
+        var xRand = 
+        yRand = Math.floor(Math.random() * 200 + 1);
+        ctx.linew = Math.round(w / 20)
+        ctx.strokeStyle = document.getElementById("lcol").value;
+        ctx.moveTo(Math.floor(Math.random() * 200 + 1), Math.floor(Math.random() * 200 + 1));
+        ctx.lineTo(Math.floor(Math.random() * 200 + 1), Math.floor(Math.random() * 200 + 1));
+        ctx.stroke();
+    }
+}
+
 function drawRand(){
     ctx.fillStyle = document.getElementById("bgcol").value;
     ctx.fillRect(0, 0, 200, 200);
