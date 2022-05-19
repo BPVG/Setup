@@ -1,5 +1,2 @@
-function onw(page) {
-    var file = page.concat(".html")
-    console.log(file)
-    window.open(file);
-}
+function onw(page) {window.open(page.concat(".html"), "", "titlebar=no,top=100,left=50,width=1800,height=800");}
+function cl() {close();}
