@@ -1,60 +1,87 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-var w = h = 200
-
-function rand(){
-    ctx.fillStyle = document.getElementById("bgcol").value;
-    ctx.fillRect(0, 0, w, h);
-    for(i = 0; i < 3; i++){
-        var xRand = 
-        yRand = Math.floor(Math.random() * 200 + 1);
-        ctx.linew = Math.round(w / 20)
-        ctx.strokeStyle = document.getElementById("lcol").value;
-        ctx.moveTo(Math.floor(Math.random() * 200 + 1), Math.floor(Math.random() * 200 + 1));
-        ctx.lineTo(Math.floor(Math.random() * 200 + 1), Math.floor(Math.random() * 200 + 1));
-        ctx.stroke();
-    }
-}
-
-function drawRand(){
-    ctx.fillStyle = document.getElementById("bgcol").value;
-    ctx.fillRect(0, 0, 200, 200);
-    for(i = 0; i < 3; i++){
-        var xRand = Math.floor(Math.random() * 200 + 1);
-        var yRand = Math.floor(Math.random() * 200 + 1);
-        ctx.fillStyle = document.getElementById("lcol").value;
-        ctx.fillRect(xRand, yRand, w, h);
-        ctx.linew = Math.round(w / 20)
-        ctx.strokeStyle = document.getElementById("lcol").value;
-        ctx.strokeRect(xRand, yRand, w, h);}
+function drawRandom(){
+    var width = parseInt(document.getElementById("width").value);
+    var height = parseInt(document.getElementById("height").value);
+    c.width = document.getElementById("c_width").value;
+    c.height = document.getElementById("c_height").value;
+    ctx.fillStyle = document.getElementById("c_color").value;
+    ctx.fillRect(0, 0, c.width, c.height);
+    for(i = 0; i < 10; i++){
+        var xRandom = Math.floor(Math.random() * c.width + 1);
+        var yRandom = Math.floor(Math.random() * c.height + 1);
+        ctx.fillStyle = document.getElementById("b_color").value;
+        ctx.fillRect(xRandom, yRandom, width, height);
+        ctx.lineWidth = Math.round(width / 20)
+        ctx.strokeStyle = document.getElementById("l_color").value;
+        ctx.strokeRect(xRandom, yRandom, width, height);}
 }
 
 function drawRegular(){
     var x_start = parseInt(document.getElementById("x_start").value);
     var y_start = parseInt(document.getElementById("y_start").value);
+    var width = parseInt(document.getElementById("width").value);
+    var height = parseInt(document.getElementById("height").value);
+    c.width = document.getElementById("c_width").value;
+    c.height = document.getElementById("c_height").value;
     ctx.fillStyle = document.getElementById("c_color").value;
-    ctx.fillRect(0, 0, c.w, c.h);
+    ctx.fillRect(0, 0, c.width, c.height);
     ctx.fillStyle = document.getElementById("b_color").value;
-    ctx.fillRect(x_start, y_start, w, h);
-    ctx.linew = Math.round(w / 20);
+    ctx.fillRect(x_start, y_start, width, height);
+    ctx.lineWidth = Math.round(width / 20);
     ctx.strokeStyle = document.getElementById("l_color").value;
-    ctx.strokeRect(x_start, y_start, w, h);
+    ctx.strokeRect(x_start, y_start, width, height);
+}
+
+function drawSquare(){
+    var x_start = parseInt(document.getElementById("x_start").value);
+    var y_start = parseInt(document.getElementById("y_start").value);
+    var width = parseInt(document.getElementById("width").value);
+    var height = parseInt(document.getElementById("height").value);
+    c.width = document.getElementById("c_width").value;
+    c.height = document.getElementById("c_height").value;
+    var s = Math.min(width, height);
+    ctx.fillStyle = document.getElementById("c_color").value;
+    ctx.fillRect(0, 0, c.width, c.height);
+    ctx.fillStyle = document.getElementById("b_color").value;
+    ctx.fillRect(x_start, y_start, s, s);
+    ctx.lineWidth = Math.round(width / 20)
+    ctx.strokeStyle = document.getElementById("l_color").value;
+    ctx.strokeRect(x_start, y_start, s, s);
+}
+
+function drawRandomSquare(){
+    var width = parseInt(document.getElementById("width").value);
+    var height = parseInt(document.getElementById("height").value);
+    c.width = document.getElementById("c_width").value;
+    c.height = document.getElementById("c_height").value;
+    var s = Math.min(width, height);
+    ctx.fillStyle = document.getElementById("c_color").value;
+    ctx.fillRect(0, 0, c.width, c.height);
+    for(i = 0; i < 10; i++){
+        var xRandom = Math.floor(Math.random() * c.width + 1);
+        var yRandom = Math.floor(Math.random() * c.height + 1);
+        ctx.fillStyle = document.getElementById("b_color").value;
+        ctx.fillRect(xRandom, yRandom, s, s);
+        ctx.lineWidth = Math.round(width / 20)
+        ctx.strokeStyle = document.getElementById("l_color").value;
+        ctx.strokeRect(xRandom, yRandom, s, s);}
 }
 
 function checkData(){
     var x_start = parseInt(document.getElementById("x_start").value);
     var y_start = parseInt(document.getElementById("y_start").value);
-    var w = parseInt(document.getElementById("w").value);
-    var h = parseInt(document.getElementById("h").value);
+    var width = parseInt(document.getElementById("width").value);
+    var height = parseInt(document.getElementById("height").value);
     canvas = document.getElementById("c_color").value;
-    c.w = document.getElementById("c_w").value;
-    c.h = document.getElementById("c_h").value;
-    if (x_start >= 0 && x_start <= c.w && y_start >= 0 && y_start <= c.h){
-        if ((x_start + w) <= c.w && (y_start + h) <= c.h){
+    c.width = document.getElementById("c_width").value;
+    c.height = document.getElementById("c_height").value;
+    if (x_start >= 0 && x_start <= c.width && y_start >= 0 && y_start <= c.height){
+        if ((x_start + width) <= c.width && (y_start + height) <= c.height){
             if (document.getElementById("sq").checked && document.getElementById("r").checked){
                 drawRandomSquare()
             } else if (document.getElementById("r").checked && !document.getElementById("sq").checked){
-                drawRand()
+                drawRandom()
             } else if (document.getElementById("sq").checked && !document.getElementById("r").checked){
                 drawSquare()
             } else {

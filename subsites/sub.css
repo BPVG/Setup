@@ -20,3 +20,15 @@ p {
     font-size: 40px;
     font-weight: 900;
 }
+label {
+    color: black;
+}
+th {
+    color: black;
+}
+td {
+    color: black;
+}
+input[type="checkbox"] {
+  filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+}

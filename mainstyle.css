@@ -2,10 +2,11 @@ body  {
     background-image: url("images/setbg.png");
     background-color: #cccccc;
 }
+
 img {
+    display: block;
     width: 1300px;
     height: 940px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     border: 8px solid #eebbc3;
@@ -17,11 +18,14 @@ img {
     border: none;
     padding: 15px;
     border-radius: 45%;
-    transition: 0.3s;
+    transition: 0.5s ease;
 }
 .btn:hover {
+    background-image: url("images/flow.png");
+    Background-size: 100%;
     background-color: #ee8f9d;
     border-radius: 35%;
+    opacity: 1;
 }
 
 .btn1 {
