@@ -1,4 +1,4 @@
-# Setup
+# Setup :trollface:	:trollface:	:trollface:	
 Kursa darbs ir veltīts mana darba stacijai, un svarīgākajiem objektiem tajā.
 1. Vairāk vēlos eksperimentēt ar css nekā parasti
 2. Imantot GitHub lai to hostotu [Saite](https://bpvg.github.io/Setup/)
